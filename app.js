@@ -16,7 +16,7 @@ const firebaseConfig = {
   appId: "1:465236000425:web:eb0c6f5eab1603e89d73b8"
 };
 
-const DOMINIO = "alunos.epbjc.pt";
+const DOMINIO = "AEBJC.onmicrosoft.com";
 
 // 2) Directory (tenant) ID da app no Microsoft Entra ID (pedir à professora; não é um segredo)
 const TENANT_ID = "4334e4b0-48f4-4a76-ae54-cec847437a72";
