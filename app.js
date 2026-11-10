@@ -35,21 +35,40 @@ function mostrarMensagem(texto, tipo = "") {
   m.hidden = !texto;
 }
 
-// ---------- LOGIN / LOGOUT ----------
+
+ // ---------- LOGIN / LOGOUT ----------
 $("btn-entrar").addEventListener("click", async () => {
   mostrarMensagem("");
+
   const provider = new OAuthProvider("microsoft.com");
-  const parametros = { prompt: "select_account" };
-  // A app é single-tenant: o login tem de apontar ao tenant da escola, não ao /common
-  if (!TENANT_ID.startsWith("4334e4b0-48f4-4a76-ae54-cec847437a72")) parametros.tenant = TENANT_ID;
-  provider.setCustomParameters(parametros);
+
+  provider.setCustomParameters({
+    prompt: "select_account",
+    tenant: TENANT_ID
+  });
+
   try {
-    await signInWithPopup(auth, provider);
+    const resultado = await signInWithPopup(auth, provider);
+
+    console.log("Login efetuado:", resultado.user.email);
+
   } catch (e) {
-    console.error(e);
-    mostrarMensagem("Não foi possível iniciar sessão (" + e.code + ").", "erro");
+    console.error("Erro de autenticação:", e);
+    mostrarMensagem(
+      "Não foi possível iniciar sessão (" + e.code + ").",
+      "erro"
+    );
   }
 });
+
+$("btn-sair").addEventListener("click", async () => {
+  try {
+    await signOut(auth);
+  } catch (e) {
+    console.error("Erro ao terminar sessão:", e);
+  }
+});
+
 
 $("btn-sair").addEventListener("click", () => signOut(auth));
 
