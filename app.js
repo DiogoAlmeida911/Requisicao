@@ -41,7 +41,7 @@ $("btn-entrar").addEventListener("click", async () => {
   const provider = new OAuthProvider("microsoft.com");
   const parametros = { prompt: "select_account" };
   // A app é single-tenant: o login tem de apontar ao tenant da escola, não ao /common
-  if (!TENANT_ID.startsWith("COLA_AQUI")) parametros.tenant = TENANT_ID;
+  if (!TENANT_ID.startsWith("4334e4b0-48f4-4a76-ae54-cec847437a72")) parametros.tenant = TENANT_ID;
   provider.setCustomParameters(parametros);
   try {
     await signInWithPopup(auth, provider);
