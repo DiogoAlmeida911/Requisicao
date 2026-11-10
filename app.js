@@ -7,13 +7,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 // Configuração do projeto Firebase (pode ser pública)
-const firebaseConfig = {
-  apiKey: "AIzaSyDqRlLvI8amZMu-P5cXM-bVS9xkNLVz4kY",
-  authDomain: "epbjc-r-de-equipamentos.firebaseapp.com",
-  projectId: "epbjc-r-de-equipamentos",
-  storageBucket: "epbjc-r-de-equipamentos.firebasestorage.app",
-  messagingSenderId: "465236000425",
-  appId: "1:465236000425:web:eb0c6f5eab1603e89d73b8"
+  const firebaseConfig = {
+  apiKey: "AIzaSyB8IfhR6LW4dvIADJe9BkrFUrHbE07XRtc",
+  authDomain: "testeequipamento.firebaseapp.com",
+  projectId: "testeequipamento",
+  storageBucket: "testeequipamento.firebasestorage.app",
+  messagingSenderId: "444321241802",
+  appId: "1:444321241802:web:324d22f9fc54536dabf233"
 };
 
 const DOMINIO = "AEBJC.onmicrosoft.com";
