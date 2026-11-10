@@ -16,7 +16,7 @@ import {
   appId: "1:444321241802:web:324d22f9fc54536dabf233"
 };
 
-const DOMINIO = "AEBJC.onmicrosoft.com";
+const DOMINIO = "alunos.epbjc.pt";
 
 // 2) Directory (tenant) ID da app no Microsoft Entra ID (pedir à professora; não é um segredo)
 const TENANT_ID = "4334e4b0-48f4-4a76-ae54-cec847437a72";
